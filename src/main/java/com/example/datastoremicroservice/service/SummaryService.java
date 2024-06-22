@@ -1,5 +1,6 @@
 package com.example.datastoremicroservice.service;
 
+import com.example.datastoremicroservice.model.Data;
 import com.example.datastoremicroservice.model.MeasurementType;
 import com.example.datastoremicroservice.model.Summary;
 import com.example.datastoremicroservice.model.SummaryType;
@@ -13,4 +14,9 @@ public interface SummaryService {
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
     );
+
+    void handle(
+            Data data
+    );
+
 }

@@ -39,5 +39,6 @@ public class Summary {
     public static class SummaryEntry {
         private SummaryType type;
         private double value;
+        private long counter;
     }
 }
