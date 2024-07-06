@@ -10,7 +10,7 @@ import java.util.Set;
 public interface SummaryService {
 
     Summary get(
-            long sensorId,
+            Long sensorId,
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
     );

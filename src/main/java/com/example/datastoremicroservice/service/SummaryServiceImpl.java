@@ -19,9 +19,10 @@ public class SummaryServiceImpl implements SummaryService {
 
     @Override
     public Summary get(
-            long sensorId,
+            Long sensorId,
             Set<MeasurementType> measurementTypes,
-            Set<SummaryType> summaryTypes) {
+            Set<SummaryType> summaryTypes
+    ) {
         return summaryRepository.findBySensorId(
                         sensorId,
                         measurementTypes == null ? Set.of(MeasurementType.values()) : measurementTypes,
@@ -31,7 +32,10 @@ public class SummaryServiceImpl implements SummaryService {
     }
 
     @Override
-    public void handle(Data data) {
+    public void handle(
+            Data data
+    ) {
         summaryRepository.handle(data);
     }
+
 }
